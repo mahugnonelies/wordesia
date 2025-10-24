@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                             const SizedBox(height: 16),
                             Wrap(spacing: 12, runSpacing: 12, children: [
                               FilledButton(
-                                onPressed: () => openUrl('https://play.google.com/store/apps/details?id=com.wordix.app'),
+                                onPressed: () => openUrl('https://play.google.com/store/apps/details?id=com.wordesia.app'),
                                 child: const Text('Télécharger sur Android'),
                               ),
                               OutlinedButton(
