@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
                           aspectRatio: 4/3,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16),
-                            child: Image.asset('assets/images/mockup.png', fit: BoxFit.cover),
+                            child: Image.asset('assets/images/mockup..png', fit: BoxFit.cover),
                           ),
                         ),
                       ),
