@@ -28,8 +28,8 @@ class WordesiaApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (_) => const HomePage(),
-        '/privacy': (_) => const PrivacyPage(),
-        '/terms': (_) => const TermsPage(),
+        '/privacy_page': (_) => const PrivacyPage(),
+        '/terms_page': (_) => const TermsPage(),
         '/legal': (_) => const LegalPage(),
         '/delete-data': (_) => const DeleteDataPage(),
       },

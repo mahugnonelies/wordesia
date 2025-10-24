@@ -185,7 +185,7 @@ class _Plan extends StatelessWidget {
           ]),
         ),
         const SizedBox(height: 12),
-        FilledButton(onPressed: () => openUrl('https://play.google.com/store/apps/details?id=com.wordix.app'), child: const Text('Commencer')),
+        FilledButton(onPressed: () => openUrl('https://play.google.com/store/apps/details?id=com.wordesia.app'), child: const Text('Commencer')),
       ]),
     ),
   );

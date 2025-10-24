@@ -13,14 +13,14 @@ class Footer extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('© 2025 Mahugnon Services Ltd — Tous droits réservés.', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white70)),
-            const SizedBox(height: 8),
             Wrap(spacing: 16, children: [
-              TextButton(onPressed: () => Navigator.pushNamed(context, '/privacy'), child: const Text('Politique de confidentialité')),
-              TextButton(onPressed: () => Navigator.pushNamed(context, '/terms'), child: const Text('Conditions d\'utilisation')),
+              TextButton(onPressed: () => Navigator.pushNamed(context, '/privacy_page'), child: const Text('Politique de confidentialité')),
+              TextButton(onPressed: () => Navigator.pushNamed(context, '/terms_page'), child: const Text('Conditions d\'utilisation')),
               TextButton(onPressed: () => Navigator.pushNamed(context, '/legal'), child: const Text('Mentions légales')),
               TextButton(onPressed: () => Navigator.pushNamed(context, '/delete-data'), child: const Text('Suppression des données')),
             ]),
+            const SizedBox(height: 8),
+            Text('© 2025 Mahugnon Services Ltd — Tous droits réservés.', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white70)),
           ],
         ),
       ),
