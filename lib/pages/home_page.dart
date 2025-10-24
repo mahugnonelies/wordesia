@@ -126,42 +126,55 @@ class HomePage extends StatelessWidget {
               ),
             ),
 
-            // 📸 SCREENSHOTS SECTION
+            // 📸 CAPTURES D'ÉCRAN
             _section(
               context,
               title: 'Captures d’écran',
-              child: LayoutBuilder(builder: (context, constraints) {
-                final crossAxisCount =
-                constraints.maxWidth < 700 ? 2 : constraints.maxWidth < 1100 ? 3 : 5;
-                return GridView.builder(
-                  itemCount: 10, // total de captures
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: crossAxisCount,
-                    crossAxisSpacing: 12,
-                    mainAxisSpacing: 12,
-                    childAspectRatio: 9 / 16, // typique format smartphone
-                  ),
-                  itemBuilder: (context, index) {
-                    final imagePath = 'assets/screenshots/screen_${index + 1}.png';
-                    return ClipRRect(
-                      borderRadius: BorderRadius.circular(14),
-                      child: Container(
-                        color: Colors.black12,
-                        child: Center(
-                          child: Image.asset(
-                            imagePath,
-                            fit: BoxFit.contain, // pas recadré
-                            alignment: Alignment.center,
-                            errorBuilder: (_, __, ___) => const Icon(Icons.broken_image, size: 40, color: Colors.grey),
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  final double width = constraints.maxWidth;
+                  int crossAxisCount = 3; // desktop par défaut
+                  if (width < 700) {
+                    crossAxisCount = 1; // mobile
+                  } else if (width < 1100) {
+                    crossAxisCount = 2; // tablette
+                  }
+
+                  return GridView.builder(
+                    itemCount: 12, // total de captures
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: crossAxisCount,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                      childAspectRatio: 9 / 16, // format téléphone
+                    ),
+                    itemBuilder: (context, index) {
+                      final imagePath =
+                          'assets/screenshots/screen_${index + 1}.png';
+                      return ClipRRect(
+                        borderRadius: BorderRadius.circular(14),
+                        child: Container(
+                          color: Colors.black12,
+                          child: Center(
+                            child: Image.asset(
+                              imagePath,
+                              fit: BoxFit.contain, // montre l’image entière
+                              alignment: Alignment.center,
+                              errorBuilder: (_, __, ___) => const Icon(
+                                Icons.broken_image,
+                                size: 40,
+                                color: Colors.grey,
+                              ),
+                            ),
                           ),
                         ),
-                      ),
-                    );
-                  },
-                );
-              }),
+                      );
+                    },
+                  );
+                },
+              ),
             ),
 
             // PRICING
