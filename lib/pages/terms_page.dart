@@ -106,8 +106,9 @@ class TermsPage extends StatelessWidget {
                       '• pour les abonnements Google Play : gérer ou annuler votre '
                       'abonnement via Google Play → Paiements et abonnements → '
                       'Abonnements ;\n'
-                      '• pour les abonnements payés via FedaPay : Contacter '
-                      'notre support à support@wordesia.com.',
+                      '• pour les abonnements payés via FedaPay : gérer votre '
+                      "abonnement dans l'application Wordesia → Autre → "
+                      'Abonnements → Choisir votre formule → choisir FedaPay comme mode de paiement. Payer pour renouveler votre abonnement avec succès;\n'
                 ),
 
                 _p(
