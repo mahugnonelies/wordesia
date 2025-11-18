@@ -1,0 +1,24 @@
+name: tick reminders cron
+
+on:
+  # Toutes les 10 minutes
+  schedule:
+    - cron: "*/10 * * * *"
+  # Lancement manuel depuis l’onglet Actions si besoin
+  workflow_dispatch:
+
+jobs:
+  call-tick-reminders:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Appel Edge Function tick-reminders
+        env:
+          SUPABASE_SERVICE_JWT: ${{ secrets.SUPABASE_SERVICE_JWT }}
+          TICK_SECRET_JWT: ${{ secrets.TICK_SECRET_JWT }}
+        run: |
+          curl -i -X POST "https://khjltwlzkhvptxfwnsfu.functions.supabase.co/tick-reminders" \
+            -H "Authorization: Bearer ${SUPABASE_SERVICE_JWT}" \
+            -H "x-tick-secret: ${TICK_SECRET_JWT}" \
+            -H "Content-Type: application/json" \
+            -d '{}'
