@@ -207,7 +207,7 @@ class TermsPage extends StatelessWidget {
                   'Le traitement des données personnelles et techniques est '
                       'expliqué en détail dans notre Politique de Confidentialité, '
                       'accessible à l’adresse suivante :\n'
-                      'https://wordesia.com/privacy\n\n'
+                      'https://www.wordesia.com/#/privacy_page\n\n'
                       'En utilisant l’application, vous acceptez également les '
                       'termes de cette Politique de Confidentialité.',
                 ),
@@ -230,7 +230,7 @@ class TermsPage extends StatelessWidget {
                       'd’Utilisation ou le fonctionnement de Wordesia Mahelso, '
                       'vous pouvez nous contacter :\n'
                       '• Email : support@wordesia.com\n'
-                      '• Site : https://wordesia.com',
+                      '• Site : https://www.wordesia.com',
                 ),
 
                 const SizedBox(height: 16),
