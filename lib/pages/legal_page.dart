@@ -18,7 +18,7 @@ class LegalPage extends StatelessWidget {
               children: [
                 Text('Mentions légales — Wordesia', style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w700)),
                 const SizedBox(height: 8),
-                Text('Dernière mise à jour : 23 octobre 2025', style: theme.textTheme.bodySmall?.copyWith(color: theme.hintColor)),
+                Text('Dernière mise à jour : 18 novembre 2025', style: theme.textTheme.bodySmall?.copyWith(color: theme.hintColor)),
                 const SizedBox(height: 16),
 
                 _h('Éditeur'),
