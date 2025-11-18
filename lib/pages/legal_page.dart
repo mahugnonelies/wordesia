@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class LegalPage extends StatelessWidget {
@@ -35,7 +36,7 @@ class LegalPage extends StatelessWidget {
                     'Toute reproduction, même partielle, est interdite sans autorisation écrite de Mahugnon Services Ltd.'),
 
                 _h('Signalement'),
-                _p('Pour signaler un contenu ou un problème technique : abuse@wordesia.com'),
+                _p('Pour signaler un contenu ou un problème technique : support@wordesia.com'),
               ],
             ),
           ),
